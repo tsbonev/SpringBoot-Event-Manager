@@ -17,16 +17,25 @@ public class FakeEventDao implements BaseDao<Event> {
     @Autowired
     private static Map<Integer, Event> events;
 
+    /*
+
     static {
         events = new HashMap<Integer, Event>(){
             {
-                put(1, new Event(1, "Tarnovoconf", "Tarnovo", LocalDateTime.from(LocalDateTime.now()),
+                put(1, new Event(1, "Tarnovoconf", "Tarnovo",
+                        LocalDateTime.from(LocalDateTime.now()),
                         LocalDateTime.from(LocalDateTime.now()).plusDays(6).plusHours(8)));
-                put(2, new Event(2, "Burgasoconf", "Burgas", LocalDateTime.from(LocalDateTime.now()).plusDays(6),
+                put(2, new Event(2, "Burgasoconf", "Burgas",
+                        LocalDateTime.from(LocalDateTime.now()).plusDays(6),
                         LocalDateTime.from(LocalDateTime.now()).plusDays(16).plusHours(3)));
+                put(3, new Event(3, "Vratsaconf", "Vratsa",
+                        LocalDateTime.from(LocalDateTime.now()).plusDays(16),
+                        LocalDateTime.from(LocalDateTime.now()).plusDays(32).plusHours(11)));
             }
         };
     }
+
+    */
 
     @Override
     public Collection<Event> getAll() {

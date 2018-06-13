@@ -1,30 +1,25 @@
 package com.tsbonev.Entity;
 
-import java.time.LocalDate;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
+@Entity
 public class Event {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     private String name;
     private String location;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
 
-    public Event(int id, String name, String location, LocalDateTime startDate, LocalDateTime endDate) {
-        this.id = id;
-        this.name = name;
-        this.location = location;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
-
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
