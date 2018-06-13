@@ -36,21 +36,17 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- JSTL for JSP -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
         </dependency>
 
-        <!-- Need this to compile JSP -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Need this to compile JSP,
-            tomcat-embed-jasper version is not working, no idea why -->
         <dependency>
             <groupId>org.eclipse.jdt.core.compiler</groupId>
             <artifactId>ecj</artifactId>
@@ -58,7 +54,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Optional, test for static content, bootstrap CSS-->
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>

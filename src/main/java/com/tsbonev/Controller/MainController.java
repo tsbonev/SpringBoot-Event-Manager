@@ -5,32 +5,28 @@ import com.tsbonev.Entity.Event;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/event")
 public class MainController {
 
     @Autowired
     private EventRepository eventRepository;
 
-    private String message = "Hello World";
+    private String message = "Hello world";
 
-    @RequestMapping("/")
-    public String welcome(Map<String, Object> model) {
+    @GetMapping("/hello")
+    public ModelAndView welcome(Map<String, Object> model) {
         model.put("message", this.message);
-        return "index";
-    }
-
-    @GetMapping(path = "/hello")
-    public String hello(){
-        return "index";
+        return new ModelAndView("hello");
     }
 
     @GetMapping(path = "/add")
-    public String addNewEvent (@RequestParam String name,
+    public ModelAndView addNewEvent (@RequestParam String name,
                                              @RequestParam String location){
         Event e = new Event();
         e.setName(name);
@@ -38,12 +34,17 @@ public class MainController {
         e.setStartDate(LocalDateTime.from(LocalDateTime.now()));
         e.setEndDate(LocalDateTime.from(LocalDateTime.now()).plusDays(6).plusHours(8));
         eventRepository.save(e);
-        return "Saved";
+        return new ModelAndView("add");
     }
 
     @GetMapping(path = "/all")
-    public Iterable<Event> getAllEvents(){
-        return eventRepository.findAll();
+    public ModelAndView getAllEvents(Map<String, Object> model){
+
+        Iterable<Event> events = eventRepository.findAll();
+
+        model.put("events", events);
+
+        return new ModelAndView("all");
     }
 
 }
