@@ -1,7 +1,9 @@
 com/tsbonev/Main.class
+com/tsbonev/Dao/MysqlEventDao.class
+com/tsbonev/Dao/EventRepository.class
 com/tsbonev/Service/EventService.class
 com/tsbonev/Dao/FakeEventDao.class
 com/tsbonev/Controller/EventController.class
 com/tsbonev/Entity/Event.class
-com/tsbonev/Dao/FakeEventDao$1.class
+com/tsbonev/Controller/MainController.class
 com/tsbonev/Dao/BaseDao.class

@@ -3,9 +3,11 @@ package com.tsbonev.Controller;
 import com.tsbonev.Dao.EventRepository;
 import com.tsbonev.Entity.Event;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 
 @RestController
 @RequestMapping(path = "/event")
@@ -13,6 +15,22 @@ public class MainController {
 
     @Autowired
     private EventRepository eventRepository;
+
+
+    // inject via application.properties
+    @Value("${welcome.message:test}")
+    private String message = "Hello World";
+
+    @RequestMapping("/")
+    public String welcome(Map<String, Object> model) {
+        model.put("message", this.message);
+        return "index";
+    }
+
+    @GetMapping(path = "/hello")
+    public String hello(){
+        return "index";
+    }
 
     @GetMapping(path = "/add")
     public String addNewEvent (@RequestParam String name,
