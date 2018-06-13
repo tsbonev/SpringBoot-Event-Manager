@@ -1,14 +1,12 @@
 package com.tsbonev.Controller;
 
-import com.tsbonev.Dao.EventRepository;
+import com.tsbonev.Repository.EventRepository;
 import com.tsbonev.Entity.Event;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.time.LocalDateTime;
-import java.util.HashMap;
 import java.util.Map;
 
 @RestController

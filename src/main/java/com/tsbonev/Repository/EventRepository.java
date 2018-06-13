@@ -1,4 +1,4 @@
-package com.tsbonev.Dao;
+package com.tsbonev.Repository;
 
 import com.tsbonev.Entity.Event;
 import org.springframework.data.repository.CrudRepository;
