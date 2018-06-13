@@ -15,7 +15,7 @@ import java.util.Map;
 public class FakeEventDao implements BaseDao<Event> {
 
     @Autowired
-    private static Map<Integer, Event> events;
+    private static Map<Long, Event> events;
 
     /*
 

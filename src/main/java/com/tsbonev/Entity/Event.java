@@ -11,14 +11,14 @@ public class Event {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
 
     private String name;
     private String location;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -52,5 +52,14 @@ public class Event {
 
     public void setEndDate(LocalDateTime endDate) {
         this.endDate = endDate;
+    }
+
+    public String getStartHour(){
+        String result = "";
+        result += this.startDate.getHour();
+        result += ":";
+        result += this.startDate.getMinute();
+        return result;
+
     }
 }

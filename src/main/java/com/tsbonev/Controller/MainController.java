@@ -37,6 +37,12 @@ public class MainController {
         return new ModelAndView("add");
     }
 
+    @RequestMapping(path = "/delete/{id}")
+    public ModelAndView deleteEvent(@PathVariable(value = "id") long id){
+        eventRepository.deleteById(id);
+        return new ModelAndView("redirect:/all");
+    }
+
     @GetMapping(path = "/all")
     public ModelAndView getAllEvents(Map<String, Object> model){
 
