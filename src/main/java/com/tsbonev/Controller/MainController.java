@@ -10,15 +10,12 @@ import java.time.LocalDateTime;
 import java.util.Map;
 
 @RestController
-@RequestMapping(path = "/event")
+@RequestMapping("/event")
 public class MainController {
 
     @Autowired
     private EventRepository eventRepository;
 
-
-    // inject via application.properties
-    @Value("${welcome.message:test}")
     private String message = "Hello World";
 
     @RequestMapping("/")
