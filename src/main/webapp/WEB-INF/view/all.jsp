@@ -22,7 +22,9 @@
                     <td><c:out value="${event.location}"></c:out></td>
                     <td><c:out value="${event.startDateFormatted}"></c:out></td>
                     <td><c:out value="${event.endDateFormatted}"></c:out></td>
-                    <td><a class="btn btn-danger" href="delete/<c:out value="${event.id}"></c:out>">Delete</a> </td>
+                    <td><a class="btn btn-primary" href="edit/<c:out value="${event.id}"></c:out>">Edit</a> </td>
+                    <td><a class="btn btn-danger" onclick="return confirm('This will delete this event.');"
+                           href="delete/<c:out value="${event.id}"></c:out>">Delete</a> </td>
                 </tr>
 
 
