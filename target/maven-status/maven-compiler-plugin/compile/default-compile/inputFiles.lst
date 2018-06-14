@@ -1,9 +1,4 @@
-/home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Dao/FakeEventDao.java
 /home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Controller/MainController.java
-/home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Dao/EventRepository.java
-/home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Controller/EventController.java
 /home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Entity/Event.java
 /home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Main.java
-/home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Dao/BaseDao.java
-/home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Dao/MysqlEventDao.java
-/home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Service/EventService.java
+/home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Repository/EventRepository.java

@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Entity
 public class Event {
@@ -54,12 +55,24 @@ public class Event {
         this.endDate = endDate;
     }
 
-    public String getStartHour(){
-        String result = "";
-        result += this.startDate.getHour();
-        result += ":";
-        result += this.startDate.getMinute();
-        return result;
+
+    public String getStartDateFormatted(){
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+        String formatDateTime = startDate.format(formatter);
+
+        return formatDateTime;
+
+    }
+
+    public String getEndDateFormatted(){
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+        String formatDateTime = endDate.format(formatter);
+
+        return formatDateTime;
 
     }
 }
