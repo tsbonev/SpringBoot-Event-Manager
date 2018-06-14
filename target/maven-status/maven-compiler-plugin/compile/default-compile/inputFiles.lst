@@ -1,4 +1,4 @@
-/home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Controller/MainController.java
+/home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Controller/EventController.java
 /home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Entity/Event.java
 /home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Main.java
 /home/tsvetozar/EventSpring/src/main/java/com/tsbonev/Repository/EventRepository.java

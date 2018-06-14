@@ -33,4 +33,5 @@
         </tbody>
 
     </table>
+
 <%@include file="fragment/footer.jspf"%>

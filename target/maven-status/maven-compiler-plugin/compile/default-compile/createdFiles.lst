@@ -1,4 +1,4 @@
+com/tsbonev/Controller/EventController.class
 com/tsbonev/Entity/Event.class
-com/tsbonev/Controller/MainController.class
 com/tsbonev/Repository/EventRepository.class
 com/tsbonev/Main.class
